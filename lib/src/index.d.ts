@@ -1,20 +1,23 @@
 import 'reflect-metadata';
 import { Connection, ConnectionOptions } from 'typeorm';
 import { Character } from './models/Character';
-export interface PGAdapterConfigInterface {
+import { Dialog } from './models/Dialog';
+import { DialogNode } from './models/DialogNode';
+import { DialogResponse } from './models/DialogResponse';
+import { DialogCondition } from './models/DialogCondition';
+export declare const Models: (typeof DialogCondition | typeof Dialog | typeof DialogResponse | typeof DialogNode | typeof Character)[];
+export interface AdapterConfigInterface {
     reconnect?: boolean;
     retryConnectionTime?: number;
     ConnectionOptions: ConnectionOptions;
 }
-export interface PGAdapterModelsInterface {
+export interface AdapterModelsInterface {
     character: Character;
 }
-export declare const Models: (typeof Character)[];
-export declare class PGAdapter {
-    static instance: PGAdapter;
+export declare class Adapter {
     private _config;
-    private _connection;
-    constructor(config?: PGAdapterConfigInterface);
-    connect(): Promise<void>;
-    readonly connection: Connection | null;
+    connection: Connection;
+    static instance: Adapter;
+    constructor(config?: AdapterConfigInterface);
+    connect(): Promise<Connection>;
 }

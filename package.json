@@ -6,7 +6,6 @@
    "types": "lib/src/index.d.ts",
    "scripts": {
       "build": "tsc",
-      "build2": "tsc --p ./src/tsconfig.json",
       "format": "prettier --write \"src/**/*.{ts,js}\"",
       "lint": "tslint -p tsconfig.json",
       "migrate:list": "npx ts-node node_modules/.bin/typeorm migration:show",
