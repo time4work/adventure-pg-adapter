@@ -5,7 +5,7 @@ import { Dialog } from './Dialog';
 @Entity({ name: 'character' })
 export class Character {
     @PrimaryGeneratedColumn('uuid')
-    public id: number;
+    public id: string;
 
     @Column({
         length: '200',

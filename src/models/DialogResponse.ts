@@ -7,7 +7,7 @@ import { Dialog } from './Dialog';
 @Entity({ name: 'dialog_response' })
 export class DialogResponse {
     @PrimaryGeneratedColumn('uuid')
-    public id: number;
+    public id: string;
 
     @Column({
         length: '200',

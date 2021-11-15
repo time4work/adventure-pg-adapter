@@ -12,7 +12,7 @@ export enum ConditionComparisonEnum {
 @Entity({ name: 'dialog_condition' })
 export class DialogCondition {
     @PrimaryGeneratedColumn('uuid')
-    public id: number;
+    public id: string;
 
     @ManyToOne((type) => Dialog, (dialog) => dialog.conditions, {
         nullable: true,

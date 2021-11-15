@@ -3,10 +3,11 @@
    "version": "1.0.0",
    "description": "",
    "type": "module",
-   "main": "lib/index.js",
-   "types": "lib/index.d.ts",
+   "main": "lib/src/index.js",
+   "types": "lib/src/index.d.ts",
    "scripts": {
-      "build": "tsc --p ./src/tsconfig.json",
+      "build": "tsc",
+      "build2": "tsc --p ./src/tsconfig.json",
       "format": "prettier --write \"src/**/*.{ts,js}\"",
       "lint": "tslint -p tsconfig.json",
       "migrate:list": "npx ts-node node_modules/.bin/typeorm migration:show",
@@ -27,6 +28,7 @@
    "homepage": "https://github.com/time4work/adventure-pg-adapter#readme",
    "devDependencies": {
       "@types/node": "^8.0.29",
+      "@types/uuid": "^8.3.1",
       "prettier": "^2.4.1",
       "ts-node": "^3.3.0",
       "tslint": "^6.1.3",

@@ -15,13 +15,9 @@ const DEFAULT_CONFIG = {
     reconnect: false,
     retryConnectionTime: 3000,
 };
-export const PgModels = [
+export const Models = [
     Character,
 ];
-
-const models = {
-    character: new Character(),
-}
 
 export class PGAdapter {
     public static instance: PGAdapter;
@@ -51,9 +47,6 @@ export class PGAdapter {
         }
     }
 
-    public get modules(): PGAdapterModelsInterface {
-        return models
-    }
     public get connection(): Connection | null {
         return this._connection;
     }
