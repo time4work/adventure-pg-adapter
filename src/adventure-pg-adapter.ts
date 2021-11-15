@@ -3,8 +3,8 @@ import { Connection, ConnectionOptions, createConnection } from 'typeorm';
 import { Character } from './models/Character';
 
 export interface PGAdapterConfigInterface {
-    reconnect: boolean;
-    retryConnectionTime: number;
+    reconnect?: boolean;
+    retryConnectionTime?: number;
     ConnectionOptions: ConnectionOptions;
 }
 export interface PGAdapterModelsInterface {
@@ -15,7 +15,7 @@ const DEFAULT_CONFIG = {
     reconnect: false,
     retryConnectionTime: 3000,
 };
-const MODELS = {
+export const MODELS = {
     character: new Character(),
 };
 

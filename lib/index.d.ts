@@ -77,13 +77,16 @@ declare module "adventure-pg-adapter" {
     import { Connection, ConnectionOptions } from 'typeorm';
     import { Character } from "models/Character";
     export interface PGAdapterConfigInterface {
-        reconnect: boolean;
-        retryConnectionTime: number;
+        reconnect?: boolean;
+        retryConnectionTime?: number;
         ConnectionOptions: ConnectionOptions;
     }
     export interface PGAdapterModelsInterface {
         character: Character;
     }
+    export const MODELS: {
+        character: Character;
+    };
     export class PGAdapter {
         static instance: PGAdapter;
         private _config;
