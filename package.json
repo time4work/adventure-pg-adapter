@@ -2,7 +2,6 @@
    "name": "adventure-pg-adapter",
    "version": "1.0.0",
    "description": "",
-   "type": "module",
    "main": "lib/src/index.js",
    "types": "lib/src/index.d.ts",
    "scripts": {
