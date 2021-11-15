@@ -84,9 +84,7 @@ declare module "adventure-pg-adapter" {
     export interface PGAdapterModelsInterface {
         character: Character;
     }
-    export const MODELS: {
-        character: Character;
-    };
+    export const PgModels: (typeof Character)[];
     export class PGAdapter {
         static instance: PGAdapter;
         private _config;
