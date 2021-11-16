@@ -6,13 +6,13 @@ import { DialogNode } from './models/DialogNode';
 import { DialogResponse } from './models/DialogResponse';
 import { DialogCondition } from './models/DialogCondition';
 
-export const Models = [
+export const Models = {
     Character,
     Dialog,
     DialogNode,
     DialogResponse,
     DialogCondition,
-];
+};
 
 export interface AdapterConfigInterface {
     reconnect?: boolean;

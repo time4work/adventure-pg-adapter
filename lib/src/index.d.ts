@@ -5,7 +5,13 @@ import { Dialog } from './models/Dialog';
 import { DialogNode } from './models/DialogNode';
 import { DialogResponse } from './models/DialogResponse';
 import { DialogCondition } from './models/DialogCondition';
-export declare const Models: (typeof DialogCondition | typeof Dialog | typeof DialogResponse | typeof DialogNode | typeof Character)[];
+export declare const Models: {
+    Character: typeof Character;
+    Dialog: typeof Dialog;
+    DialogNode: typeof DialogNode;
+    DialogResponse: typeof DialogResponse;
+    DialogCondition: typeof DialogCondition;
+};
 export interface AdapterConfigInterface {
     reconnect?: boolean;
     retryConnectionTime?: number;

@@ -1,4 +1,5 @@
 src/
+migration/
 tslint.json
 tsconfig.json
 .prettierrc.json
